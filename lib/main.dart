@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:goodycricket/ui/navbar/navbar.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
