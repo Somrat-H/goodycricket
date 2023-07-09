@@ -29,7 +29,7 @@ class _NewsState extends State<News> {
   @override
   // void initState() {
     
-  //   // TODO: implement initState
+  //  
   //   super.initState();
   // }
 
@@ -45,7 +45,7 @@ class _NewsState extends State<News> {
         future: getData(),
         builder: (context,AsyncSnapshot<dynamic>snapshot){
           if(!snapshot.hasData){
-                  return Center(
+                  return const Center(
                     child: CircularProgressIndicator(),
                   );
                 }
@@ -61,7 +61,7 @@ class _NewsState extends State<News> {
                               description = snapshot.data!.articles![index].description.toString();
                               author = snapshot.data!.articles![index].author;
                             });
-                            print(description);
+                           
                             Navigator.push(context, MaterialPageRoute(builder: (_)=> NewsDeatils(
                               imageUrl: image, title: title, description: description, author: author)));
                           },
@@ -85,11 +85,11 @@ class _NewsState extends State<News> {
                                       mainAxisAlignment: MainAxisAlignment.start,
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Text(snapshot.data!.articles![index].title.toString(), maxLines: 2, style: TextStyle(
+                                        Text(snapshot.data!.articles![index].title.toString(), maxLines: 2, style: const TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w500,
                                         ),),
-                                        SizedBox(height: 5,),
+                                        const SizedBox(height: 5,),
                                         // Text((DateTime.parse(snapshot.data!.articles![index].publishedAt.toString())).toString()),
                                         Text(GetTimeAgo.parse(DateTime.parse(snapshot.data!.articles![index].publishedAt.toString()))),
                                         // Text(snapshot.data!.articles![index].publishedAt.toString(), maxLines: 1,), 
@@ -98,7 +98,7 @@ class _NewsState extends State<News> {
                                   )),
                                 ],
                               ),
-                              subtitle: Text(snapshot.data!.articles![index].description.toString() + '....See More', maxLines: 3, style: TextStyle(
+                              subtitle: Text('${snapshot.data!.articles![index].description}....See More', maxLines: 3, style: const TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500,
                                         ),),

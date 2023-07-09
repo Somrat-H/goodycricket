@@ -3,6 +3,7 @@ import 'package:goodycricket/ui/navbar/homepage/featured.dart';
 import 'package:goodycricket/ui/navbar/homepage/goodyplus.dart';
 import 'package:goodycricket/ui/widget/my_style.dart';
 
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -12,7 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int index = 0;
-  List<Widget> page = [Featured(), GoodyPlus()];
+  List<Widget> page = [const Featured(), const GoodyPlus()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         'Goody',
                         style: TextStyle(
                           color: Colors.white,
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(25),
                           border: Border.all(color: Colors.white),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Log In',
                             style: TextStyle(
@@ -137,7 +138,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
               child: Container(
-            child: index == 0 ? Featured() : GoodyPlus(),
+            child: index == 0 ? const Featured() : const GoodyPlus(),
           ))
         ],
       )),

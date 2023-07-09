@@ -12,14 +12,14 @@ class Matches extends StatefulWidget {
 
 class _MatchesState extends State<Matches> {
   int index = 0;
-  List<Widget> page = [Live(), Upcoming(), Recent()];
+  List<Widget> page = [const Live(), const Upcoming(), const Recent()];
   Widget showWidget(){
     if(index == 0){
-      return Live();
+      return const Live();
     }else if(index == 1){
-     return Upcoming();
+     return const Upcoming();
     }else{
-     return Recent();
+     return const Recent();
     }
   }
   @override

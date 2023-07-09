@@ -12,7 +12,7 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  List<Widget> pages=[HomePage(), Matches(), Video(), News(), More()];
+  List<Widget> pages=[const HomePage(), const Matches(), const Video(), const News(), const More()];
   int currentIndex = 0;
 
   void tap(int index){
@@ -32,12 +32,12 @@ class _NavBarState extends State<NavBar> {
         selectedItemColor: Colors.black,
         // backgroundColor: Colors.green.shade600,
         showUnselectedLabels: true,
-        items: [
-              BottomNavigationBarItem(icon: Icon(Icons.home,), label: 'Home'),
-              BottomNavigationBarItem(icon: Icon(Icons.sports_cricket), label: 'Matches'),
-              BottomNavigationBarItem(icon: Icon(Icons.play_circle), label: 'Video'),
-              BottomNavigationBarItem(icon: Icon(Icons.newspaper), label: 'News'),
-              BottomNavigationBarItem(icon: Icon(Icons.more_vert_outlined), label: 'More'),
+        items: const[
+               BottomNavigationBarItem(icon: Icon(Icons.home,), label: 'Home'),
+               BottomNavigationBarItem(icon: Icon(Icons.sports_cricket), label: 'Matches'),
+               BottomNavigationBarItem(icon: Icon(Icons.play_circle), label: 'Video'),
+               BottomNavigationBarItem(icon: Icon(Icons.newspaper), label: 'News'),
+               BottomNavigationBarItem(icon: Icon(Icons.more_vert_outlined), label: 'More'),
 
       ],
       ),

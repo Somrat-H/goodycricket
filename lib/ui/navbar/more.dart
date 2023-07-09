@@ -11,7 +11,7 @@ class More extends StatelessWidget {
         backgroundColor: Colors.green.shade600,
         title: myStyle('More', Colors.white, 22, FontWeight.w700),
       ),
-      body: Center(
+      body: const Center(
         child: Text('More'),
       ),
     );

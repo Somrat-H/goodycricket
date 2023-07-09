@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:goodycricket/ui/navbar/navbar.dart';
 import 'package:goodycricket/ui/widget/my_style.dart';
+// ignore: must_be_immutable
 class NewsDeatils extends StatefulWidget {
   String imageUrl;
   String title;
@@ -22,10 +23,10 @@ class _NewsDeatilsState extends State<NewsDeatils> {
            SliverAppBar(
             snap: false,
             leading: IconButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_)=>NavBar()));
-            }, icon: Icon(Icons.arrow_back)),
+              Navigator.push(context, MaterialPageRoute(builder: (_)=>const NavBar()));
+            }, icon: const Icon(Icons.arrow_back)),
             actions: [
-              IconButton(onPressed: (){}, icon: Icon(Icons.share))
+              IconButton(onPressed: (){}, icon: const Icon(Icons.share))
             ],
               floating: false,
               expandedHeight: 160.0,
@@ -41,9 +42,9 @@ class _NewsDeatilsState extends State<NewsDeatils> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 myStyle(widget.title, Colors.black, 24, FontWeight.w400),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 myStyle(widget.author, Colors.blue, 16, FontWeight.w400),
-                 SizedBox(height: 10,),
+                 const SizedBox(height: 10,),
                 Text(widget.description,),
               ],
             ),
