@@ -10,7 +10,7 @@ class Video extends StatelessWidget {
         backgroundColor: Colors.green.shade500,
         title: myStyle('Video', Colors.white, 22, FontWeight.w700),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Video'),
       ),
     );
