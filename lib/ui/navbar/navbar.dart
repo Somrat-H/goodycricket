@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:goodycricket/ui/navbar/homepage/home_page.dart';
 import 'package:goodycricket/ui/navbar/matches/matches.dart';
 import 'package:goodycricket/ui/navbar/more.dart';
-import 'package:goodycricket/ui/navbar/news.dart';
+import 'package:goodycricket/ui/navbar/news/news.dart';
 import 'package:goodycricket/ui/navbar/video.dart';
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
